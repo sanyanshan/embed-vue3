@@ -1,0 +1,27 @@
+<!doctype html>
+<meta charset="utf-8"><title>OrgSelectDialog demo</title>
+<script src="https://unpkg.com/vue@3.4.37/dist/vue.global.prod.js"></script>
+<script src="./dist/HelloWorld.umd.js"></script>
+<script>console.log(HelloWorld)</script>
+<p>html中的其他内容</p>
+<p>html中的其他内容</p>
+<p>html中的其他内容</p>
+<div id="demo">
+    <my-component :msg="msg"></my-component>
+</div>
+<p>html中的其他内容</p>
+<p>html中的其他内容</p>
+<p>html中的其他内容</p>
+<script>
+    window.addEventListener("load",()=>{
+        const app = Vue.createApp({
+            data() {
+                return {
+                    msg: `hello`
+                }
+            },
+        })
+        app.component("my-component", HelloWorld)
+        app.mount('#demo')
+    })
+</script>
